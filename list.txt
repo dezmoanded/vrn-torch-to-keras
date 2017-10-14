@@ -1,0 +1,1339 @@
+0	nn.SpatialConvolution	(64, 3, 7, 7)
+1	nn.SpatialBatchNormalization	(64,)
+2	nn.ReLU	
+3	nn.Sequential	
+4	    nn.ConcatTable	
+5	        nn.Sequential	
+6	            nn.SpatialBatchNormalization	(64,)
+7	            nn.ReLU	
+8	            nn.SpatialConvolution	(64, 64, 1, 1)
+9	            nn.SpatialBatchNormalization	(64,)
+10	            nn.ReLU	
+11	            nn.SpatialConvolution	(64, 64, 3, 3)
+12	            nn.SpatialBatchNormalization	(64,)
+13	            nn.ReLU	
+14	            nn.SpatialConvolution	(128, 64, 1, 1)
+15	        nn.Sequential	
+16	            nn.SpatialConvolution	(128, 64, 1, 1)
+17	    nn.CAddTable	
+18	nn.SpatialMaxPooling	
+19	nn.Sequential	
+20	    nn.ConcatTable	
+21	        nn.Sequential	
+22	            nn.SpatialBatchNormalization	(128,)
+23	            nn.ReLU	
+24	            nn.SpatialConvolution	(64, 128, 1, 1)
+25	            nn.SpatialBatchNormalization	(64,)
+26	            nn.ReLU	
+27	            nn.SpatialConvolution	(64, 64, 3, 3)
+28	            nn.SpatialBatchNormalization	(64,)
+29	            nn.ReLU	
+30	            nn.SpatialConvolution	(128, 64, 1, 1)
+31	        nn.Identity	
+32	    nn.CAddTable	
+33	nn.Sequential	
+34	    nn.ConcatTable	
+35	        nn.Sequential	
+36	            nn.SpatialBatchNormalization	(128,)
+37	            nn.ReLU	
+38	            nn.SpatialConvolution	(128, 128, 1, 1)
+39	            nn.SpatialBatchNormalization	(128,)
+40	            nn.ReLU	
+41	            nn.SpatialConvolution	(128, 128, 3, 3)
+42	            nn.SpatialBatchNormalization	(128,)
+43	            nn.ReLU	
+44	            nn.SpatialConvolution	(256, 128, 1, 1)
+45	        nn.Sequential	
+46	            nn.SpatialConvolution	(256, 128, 1, 1)
+47	    nn.CAddTable	
+48	nn.ConcatTable	
+49	    nn.Identity	
+50	    nn.Sequential	
+51	        nn.ConcatTable	
+52	            nn.Sequential	
+53	                nn.Sequential	
+54	                    nn.ConcatTable	
+55	                        nn.Sequential	
+56	                            nn.SpatialBatchNormalization	(256,)
+57	                            nn.ReLU	
+58	                            nn.SpatialConvolution	(128, 256, 1, 1)
+59	                            nn.SpatialBatchNormalization	(128,)
+60	                            nn.ReLU	
+61	                            nn.SpatialConvolution	(128, 128, 3, 3)
+62	                            nn.SpatialBatchNormalization	(128,)
+63	                            nn.ReLU	
+64	                            nn.SpatialConvolution	(256, 128, 1, 1)
+65	                        nn.Identity	
+66	                    nn.CAddTable	
+67	                nn.Sequential	
+68	                    nn.ConcatTable	
+69	                        nn.Sequential	
+70	                            nn.SpatialBatchNormalization	(256,)
+71	                            nn.ReLU	
+72	                            nn.SpatialConvolution	(128, 256, 1, 1)
+73	                            nn.SpatialBatchNormalization	(128,)
+74	                            nn.ReLU	
+75	                            nn.SpatialConvolution	(128, 128, 3, 3)
+76	                            nn.SpatialBatchNormalization	(128,)
+77	                            nn.ReLU	
+78	                            nn.SpatialConvolution	(256, 128, 1, 1)
+79	                        nn.Identity	
+80	                    nn.CAddTable	
+81	                nn.Sequential	
+82	                    nn.ConcatTable	
+83	                        nn.Sequential	
+84	                            nn.SpatialBatchNormalization	(256,)
+85	                            nn.ReLU	
+86	                            nn.SpatialConvolution	(128, 256, 1, 1)
+87	                            nn.SpatialBatchNormalization	(128,)
+88	                            nn.ReLU	
+89	                            nn.SpatialConvolution	(128, 128, 3, 3)
+90	                            nn.SpatialBatchNormalization	(128,)
+91	                            nn.ReLU	
+92	                            nn.SpatialConvolution	(256, 128, 1, 1)
+93	                        nn.Identity	
+94	                    nn.CAddTable	
+95	                nn.Sequential	
+96	                    nn.ConcatTable	
+97	                        nn.Sequential	
+98	                            nn.Sequential	
+99	                                nn.ConcatTable	
+100	                                    nn.Sequential	
+101	                                        nn.SpatialBatchNormalization	(256,)
+102	                                        nn.ReLU	
+103	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+104	                                        nn.SpatialBatchNormalization	(128,)
+105	                                        nn.ReLU	
+106	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+107	                                        nn.SpatialBatchNormalization	(128,)
+108	                                        nn.ReLU	
+109	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+110	                                    nn.Identity	
+111	                                nn.CAddTable	
+112	                            nn.Sequential	
+113	                                nn.ConcatTable	
+114	                                    nn.Sequential	
+115	                                        nn.SpatialBatchNormalization	(256,)
+116	                                        nn.ReLU	
+117	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+118	                                        nn.SpatialBatchNormalization	(128,)
+119	                                        nn.ReLU	
+120	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+121	                                        nn.SpatialBatchNormalization	(128,)
+122	                                        nn.ReLU	
+123	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+124	                                    nn.Identity	
+125	                                nn.CAddTable	
+126	                            nn.Sequential	
+127	                                nn.ConcatTable	
+128	                                    nn.Sequential	
+129	                                        nn.SpatialBatchNormalization	(256,)
+130	                                        nn.ReLU	
+131	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+132	                                        nn.SpatialBatchNormalization	(128,)
+133	                                        nn.ReLU	
+134	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+135	                                        nn.SpatialBatchNormalization	(128,)
+136	                                        nn.ReLU	
+137	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+138	                                    nn.Identity	
+139	                                nn.CAddTable	
+140	                            nn.Sequential	
+141	                                nn.ConcatTable	
+142	                                    nn.Sequential	
+143	                                        nn.Sequential	
+144	                                            nn.ConcatTable	
+145	                                                nn.Sequential	
+146	                                                    nn.SpatialBatchNormalization	(256,)
+147	                                                    nn.ReLU	
+148	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+149	                                                    nn.SpatialBatchNormalization	(128,)
+150	                                                    nn.ReLU	
+151	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+152	                                                    nn.SpatialBatchNormalization	(128,)
+153	                                                    nn.ReLU	
+154	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+155	                                                nn.Identity	
+156	                                            nn.CAddTable	
+157	                                        nn.Sequential	
+158	                                            nn.ConcatTable	
+159	                                                nn.Sequential	
+160	                                                    nn.SpatialBatchNormalization	(256,)
+161	                                                    nn.ReLU	
+162	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+163	                                                    nn.SpatialBatchNormalization	(128,)
+164	                                                    nn.ReLU	
+165	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+166	                                                    nn.SpatialBatchNormalization	(128,)
+167	                                                    nn.ReLU	
+168	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+169	                                                nn.Identity	
+170	                                            nn.CAddTable	
+171	                                        nn.Sequential	
+172	                                            nn.ConcatTable	
+173	                                                nn.Sequential	
+174	                                                    nn.SpatialBatchNormalization	(256,)
+175	                                                    nn.ReLU	
+176	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+177	                                                    nn.SpatialBatchNormalization	(128,)
+178	                                                    nn.ReLU	
+179	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+180	                                                    nn.SpatialBatchNormalization	(128,)
+181	                                                    nn.ReLU	
+182	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+183	                                                nn.Identity	
+184	                                            nn.CAddTable	
+185	                                        nn.Sequential	
+186	                                            nn.ConcatTable	
+187	                                                nn.Sequential	
+188	                                                    nn.Sequential	
+189	                                                        nn.ConcatTable	
+190	                                                            nn.Sequential	
+191	                                                                nn.SpatialBatchNormalization	(256,)
+192	                                                                nn.ReLU	
+193	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+194	                                                                nn.SpatialBatchNormalization	(128,)
+195	                                                                nn.ReLU	
+196	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+197	                                                                nn.SpatialBatchNormalization	(128,)
+198	                                                                nn.ReLU	
+199	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+200	                                                            nn.Identity	
+201	                                                        nn.CAddTable	
+202	                                                    nn.Sequential	
+203	                                                        nn.ConcatTable	
+204	                                                            nn.Sequential	
+205	                                                                nn.SpatialBatchNormalization	(256,)
+206	                                                                nn.ReLU	
+207	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+208	                                                                nn.SpatialBatchNormalization	(128,)
+209	                                                                nn.ReLU	
+210	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+211	                                                                nn.SpatialBatchNormalization	(128,)
+212	                                                                nn.ReLU	
+213	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+214	                                                            nn.Identity	
+215	                                                        nn.CAddTable	
+216	                                                    nn.Sequential	
+217	                                                        nn.ConcatTable	
+218	                                                            nn.Sequential	
+219	                                                                nn.SpatialBatchNormalization	(256,)
+220	                                                                nn.ReLU	
+221	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+222	                                                                nn.SpatialBatchNormalization	(128,)
+223	                                                                nn.ReLU	
+224	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+225	                                                                nn.SpatialBatchNormalization	(128,)
+226	                                                                nn.ReLU	
+227	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+228	                                                            nn.Identity	
+229	                                                        nn.CAddTable	
+230	                                                nn.Sequential	
+231	                                                    nn.SpatialMaxPooling	
+232	                                                    nn.Sequential	
+233	                                                        nn.ConcatTable	
+234	                                                            nn.Sequential	
+235	                                                                nn.SpatialBatchNormalization	(256,)
+236	                                                                nn.ReLU	
+237	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+238	                                                                nn.SpatialBatchNormalization	(128,)
+239	                                                                nn.ReLU	
+240	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+241	                                                                nn.SpatialBatchNormalization	(128,)
+242	                                                                nn.ReLU	
+243	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+244	                                                            nn.Identity	
+245	                                                        nn.CAddTable	
+246	                                                    nn.Sequential	
+247	                                                        nn.ConcatTable	
+248	                                                            nn.Sequential	
+249	                                                                nn.SpatialBatchNormalization	(256,)
+250	                                                                nn.ReLU	
+251	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+252	                                                                nn.SpatialBatchNormalization	(128,)
+253	                                                                nn.ReLU	
+254	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+255	                                                                nn.SpatialBatchNormalization	(128,)
+256	                                                                nn.ReLU	
+257	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+258	                                                            nn.Identity	
+259	                                                        nn.CAddTable	
+260	                                                    nn.Sequential	
+261	                                                        nn.ConcatTable	
+262	                                                            nn.Sequential	
+263	                                                                nn.SpatialBatchNormalization	(256,)
+264	                                                                nn.ReLU	
+265	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+266	                                                                nn.SpatialBatchNormalization	(128,)
+267	                                                                nn.ReLU	
+268	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+269	                                                                nn.SpatialBatchNormalization	(128,)
+270	                                                                nn.ReLU	
+271	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+272	                                                            nn.Identity	
+273	                                                        nn.CAddTable	
+274	                                                    nn.Sequential	
+275	                                                        nn.ConcatTable	
+276	                                                            nn.Sequential	
+277	                                                                nn.SpatialBatchNormalization	(256,)
+278	                                                                nn.ReLU	
+279	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+280	                                                                nn.SpatialBatchNormalization	(128,)
+281	                                                                nn.ReLU	
+282	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+283	                                                                nn.SpatialBatchNormalization	(128,)
+284	                                                                nn.ReLU	
+285	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+286	                                                            nn.Identity	
+287	                                                        nn.CAddTable	
+288	                                                    nn.Sequential	
+289	                                                        nn.ConcatTable	
+290	                                                            nn.Sequential	
+291	                                                                nn.SpatialBatchNormalization	(256,)
+292	                                                                nn.ReLU	
+293	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+294	                                                                nn.SpatialBatchNormalization	(128,)
+295	                                                                nn.ReLU	
+296	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+297	                                                                nn.SpatialBatchNormalization	(128,)
+298	                                                                nn.ReLU	
+299	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+300	                                                            nn.Identity	
+301	                                                        nn.CAddTable	
+302	                                                    nn.Sequential	
+303	                                                        nn.ConcatTable	
+304	                                                            nn.Sequential	
+305	                                                                nn.SpatialBatchNormalization	(256,)
+306	                                                                nn.ReLU	
+307	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+308	                                                                nn.SpatialBatchNormalization	(128,)
+309	                                                                nn.ReLU	
+310	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+311	                                                                nn.SpatialBatchNormalization	(128,)
+312	                                                                nn.ReLU	
+313	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+314	                                                            nn.Identity	
+315	                                                        nn.CAddTable	
+316	                                                    nn.Sequential	
+317	                                                        nn.ConcatTable	
+318	                                                            nn.Sequential	
+319	                                                                nn.SpatialBatchNormalization	(256,)
+320	                                                                nn.ReLU	
+321	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+322	                                                                nn.SpatialBatchNormalization	(128,)
+323	                                                                nn.ReLU	
+324	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+325	                                                                nn.SpatialBatchNormalization	(128,)
+326	                                                                nn.ReLU	
+327	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+328	                                                            nn.Identity	
+329	                                                        nn.CAddTable	
+330	                                                    nn.Sequential	
+331	                                                        nn.ConcatTable	
+332	                                                            nn.Sequential	
+333	                                                                nn.SpatialBatchNormalization	(256,)
+334	                                                                nn.ReLU	
+335	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+336	                                                                nn.SpatialBatchNormalization	(128,)
+337	                                                                nn.ReLU	
+338	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+339	                                                                nn.SpatialBatchNormalization	(128,)
+340	                                                                nn.ReLU	
+341	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+342	                                                            nn.Identity	
+343	                                                        nn.CAddTable	
+344	                                                    nn.Sequential	
+345	                                                        nn.ConcatTable	
+346	                                                            nn.Sequential	
+347	                                                                nn.SpatialBatchNormalization	(256,)
+348	                                                                nn.ReLU	
+349	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+350	                                                                nn.SpatialBatchNormalization	(128,)
+351	                                                                nn.ReLU	
+352	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+353	                                                                nn.SpatialBatchNormalization	(128,)
+354	                                                                nn.ReLU	
+355	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+356	                                                            nn.Identity	
+357	                                                        nn.CAddTable	
+358	                                                    nn.SpatialUpSamplingNearest	
+359	                                            nn.CAddTable	
+360	                                            nn.Sequential	
+361	                                                nn.ConcatTable	
+362	                                                    nn.Sequential	
+363	                                                        nn.SpatialBatchNormalization	(256,)
+364	                                                        nn.ReLU	
+365	                                                        nn.SpatialConvolution	(128, 256, 1, 1)
+366	                                                        nn.SpatialBatchNormalization	(128,)
+367	                                                        nn.ReLU	
+368	                                                        nn.SpatialConvolution	(128, 128, 3, 3)
+369	                                                        nn.SpatialBatchNormalization	(128,)
+370	                                                        nn.ReLU	
+371	                                                        nn.SpatialConvolution	(256, 128, 1, 1)
+372	                                                    nn.Identity	
+373	                                                nn.CAddTable	
+374	                                    nn.Sequential	
+375	                                        nn.SpatialMaxPooling	
+376	                                        nn.Sequential	
+377	                                            nn.ConcatTable	
+378	                                                nn.Sequential	
+379	                                                    nn.SpatialBatchNormalization	(256,)
+380	                                                    nn.ReLU	
+381	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+382	                                                    nn.SpatialBatchNormalization	(128,)
+383	                                                    nn.ReLU	
+384	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+385	                                                    nn.SpatialBatchNormalization	(128,)
+386	                                                    nn.ReLU	
+387	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+388	                                                nn.Identity	
+389	                                            nn.CAddTable	
+390	                                        nn.Sequential	
+391	                                            nn.ConcatTable	
+392	                                                nn.Sequential	
+393	                                                    nn.SpatialBatchNormalization	(256,)
+394	                                                    nn.ReLU	
+395	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+396	                                                    nn.SpatialBatchNormalization	(128,)
+397	                                                    nn.ReLU	
+398	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+399	                                                    nn.SpatialBatchNormalization	(128,)
+400	                                                    nn.ReLU	
+401	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+402	                                                nn.Identity	
+403	                                            nn.CAddTable	
+404	                                        nn.Sequential	
+405	                                            nn.ConcatTable	
+406	                                                nn.Sequential	
+407	                                                    nn.SpatialBatchNormalization	(256,)
+408	                                                    nn.ReLU	
+409	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+410	                                                    nn.SpatialBatchNormalization	(128,)
+411	                                                    nn.ReLU	
+412	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+413	                                                    nn.SpatialBatchNormalization	(128,)
+414	                                                    nn.ReLU	
+415	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+416	                                                nn.Identity	
+417	                                            nn.CAddTable	
+418	                                        nn.Sequential	
+419	                                            nn.ConcatTable	
+420	                                                nn.Sequential	
+421	                                                    nn.SpatialBatchNormalization	(256,)
+422	                                                    nn.ReLU	
+423	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+424	                                                    nn.SpatialBatchNormalization	(128,)
+425	                                                    nn.ReLU	
+426	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+427	                                                    nn.SpatialBatchNormalization	(128,)
+428	                                                    nn.ReLU	
+429	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+430	                                                nn.Identity	
+431	                                            nn.CAddTable	
+432	                                        nn.Sequential	
+433	                                            nn.ConcatTable	
+434	                                                nn.Sequential	
+435	                                                    nn.SpatialBatchNormalization	(256,)
+436	                                                    nn.ReLU	
+437	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+438	                                                    nn.SpatialBatchNormalization	(128,)
+439	                                                    nn.ReLU	
+440	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+441	                                                    nn.SpatialBatchNormalization	(128,)
+442	                                                    nn.ReLU	
+443	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+444	                                                nn.Identity	
+445	                                            nn.CAddTable	
+446	                                        nn.Sequential	
+447	                                            nn.ConcatTable	
+448	                                                nn.Sequential	
+449	                                                    nn.SpatialBatchNormalization	(256,)
+450	                                                    nn.ReLU	
+451	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+452	                                                    nn.SpatialBatchNormalization	(128,)
+453	                                                    nn.ReLU	
+454	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+455	                                                    nn.SpatialBatchNormalization	(128,)
+456	                                                    nn.ReLU	
+457	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+458	                                                nn.Identity	
+459	                                            nn.CAddTable	
+460	                                        nn.SpatialUpSamplingNearest	
+461	                                nn.CAddTable	
+462	                                nn.Sequential	
+463	                                    nn.ConcatTable	
+464	                                        nn.Sequential	
+465	                                            nn.SpatialBatchNormalization	(256,)
+466	                                            nn.ReLU	
+467	                                            nn.SpatialConvolution	(128, 256, 1, 1)
+468	                                            nn.SpatialBatchNormalization	(128,)
+469	                                            nn.ReLU	
+470	                                            nn.SpatialConvolution	(128, 128, 3, 3)
+471	                                            nn.SpatialBatchNormalization	(128,)
+472	                                            nn.ReLU	
+473	                                            nn.SpatialConvolution	(256, 128, 1, 1)
+474	                                        nn.Identity	
+475	                                    nn.CAddTable	
+476	                        nn.Sequential	
+477	                            nn.SpatialMaxPooling	
+478	                            nn.Sequential	
+479	                                nn.ConcatTable	
+480	                                    nn.Sequential	
+481	                                        nn.SpatialBatchNormalization	(256,)
+482	                                        nn.ReLU	
+483	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+484	                                        nn.SpatialBatchNormalization	(128,)
+485	                                        nn.ReLU	
+486	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+487	                                        nn.SpatialBatchNormalization	(128,)
+488	                                        nn.ReLU	
+489	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+490	                                    nn.Identity	
+491	                                nn.CAddTable	
+492	                            nn.Sequential	
+493	                                nn.ConcatTable	
+494	                                    nn.Sequential	
+495	                                        nn.SpatialBatchNormalization	(256,)
+496	                                        nn.ReLU	
+497	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+498	                                        nn.SpatialBatchNormalization	(128,)
+499	                                        nn.ReLU	
+500	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+501	                                        nn.SpatialBatchNormalization	(128,)
+502	                                        nn.ReLU	
+503	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+504	                                    nn.Identity	
+505	                                nn.CAddTable	
+506	                            nn.Sequential	
+507	                                nn.ConcatTable	
+508	                                    nn.Sequential	
+509	                                        nn.SpatialBatchNormalization	(256,)
+510	                                        nn.ReLU	
+511	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+512	                                        nn.SpatialBatchNormalization	(128,)
+513	                                        nn.ReLU	
+514	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+515	                                        nn.SpatialBatchNormalization	(128,)
+516	                                        nn.ReLU	
+517	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+518	                                    nn.Identity	
+519	                                nn.CAddTable	
+520	                            nn.Sequential	
+521	                                nn.ConcatTable	
+522	                                    nn.Sequential	
+523	                                        nn.SpatialBatchNormalization	(256,)
+524	                                        nn.ReLU	
+525	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+526	                                        nn.SpatialBatchNormalization	(128,)
+527	                                        nn.ReLU	
+528	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+529	                                        nn.SpatialBatchNormalization	(128,)
+530	                                        nn.ReLU	
+531	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+532	                                    nn.Identity	
+533	                                nn.CAddTable	
+534	                            nn.Sequential	
+535	                                nn.ConcatTable	
+536	                                    nn.Sequential	
+537	                                        nn.SpatialBatchNormalization	(256,)
+538	                                        nn.ReLU	
+539	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+540	                                        nn.SpatialBatchNormalization	(128,)
+541	                                        nn.ReLU	
+542	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+543	                                        nn.SpatialBatchNormalization	(128,)
+544	                                        nn.ReLU	
+545	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+546	                                    nn.Identity	
+547	                                nn.CAddTable	
+548	                            nn.Sequential	
+549	                                nn.ConcatTable	
+550	                                    nn.Sequential	
+551	                                        nn.SpatialBatchNormalization	(256,)
+552	                                        nn.ReLU	
+553	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+554	                                        nn.SpatialBatchNormalization	(128,)
+555	                                        nn.ReLU	
+556	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+557	                                        nn.SpatialBatchNormalization	(128,)
+558	                                        nn.ReLU	
+559	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+560	                                    nn.Identity	
+561	                                nn.CAddTable	
+562	                            nn.SpatialUpSamplingNearest	
+563	                    nn.CAddTable	
+564	                    nn.Sequential	
+565	                        nn.ConcatTable	
+566	                            nn.Sequential	
+567	                                nn.SpatialBatchNormalization	(256,)
+568	                                nn.ReLU	
+569	                                nn.SpatialConvolution	(128, 256, 1, 1)
+570	                                nn.SpatialBatchNormalization	(128,)
+571	                                nn.ReLU	
+572	                                nn.SpatialConvolution	(128, 128, 3, 3)
+573	                                nn.SpatialBatchNormalization	(128,)
+574	                                nn.ReLU	
+575	                                nn.SpatialConvolution	(256, 128, 1, 1)
+576	                            nn.Identity	
+577	                        nn.CAddTable	
+578	            nn.Sequential	
+579	                nn.SpatialMaxPooling	
+580	                nn.Sequential	
+581	                    nn.ConcatTable	
+582	                        nn.Sequential	
+583	                            nn.SpatialBatchNormalization	(256,)
+584	                            nn.ReLU	
+585	                            nn.SpatialConvolution	(128, 256, 1, 1)
+586	                            nn.SpatialBatchNormalization	(128,)
+587	                            nn.ReLU	
+588	                            nn.SpatialConvolution	(128, 128, 3, 3)
+589	                            nn.SpatialBatchNormalization	(128,)
+590	                            nn.ReLU	
+591	                            nn.SpatialConvolution	(256, 128, 1, 1)
+592	                        nn.Identity	
+593	                    nn.CAddTable	
+594	                nn.Sequential	
+595	                    nn.ConcatTable	
+596	                        nn.Sequential	
+597	                            nn.SpatialBatchNormalization	(256,)
+598	                            nn.ReLU	
+599	                            nn.SpatialConvolution	(128, 256, 1, 1)
+600	                            nn.SpatialBatchNormalization	(128,)
+601	                            nn.ReLU	
+602	                            nn.SpatialConvolution	(128, 128, 3, 3)
+603	                            nn.SpatialBatchNormalization	(128,)
+604	                            nn.ReLU	
+605	                            nn.SpatialConvolution	(256, 128, 1, 1)
+606	                        nn.Identity	
+607	                    nn.CAddTable	
+608	                nn.Sequential	
+609	                    nn.ConcatTable	
+610	                        nn.Sequential	
+611	                            nn.SpatialBatchNormalization	(256,)
+612	                            nn.ReLU	
+613	                            nn.SpatialConvolution	(128, 256, 1, 1)
+614	                            nn.SpatialBatchNormalization	(128,)
+615	                            nn.ReLU	
+616	                            nn.SpatialConvolution	(128, 128, 3, 3)
+617	                            nn.SpatialBatchNormalization	(128,)
+618	                            nn.ReLU	
+619	                            nn.SpatialConvolution	(256, 128, 1, 1)
+620	                        nn.Identity	
+621	                    nn.CAddTable	
+622	                nn.Sequential	
+623	                    nn.ConcatTable	
+624	                        nn.Sequential	
+625	                            nn.SpatialBatchNormalization	(256,)
+626	                            nn.ReLU	
+627	                            nn.SpatialConvolution	(128, 256, 1, 1)
+628	                            nn.SpatialBatchNormalization	(128,)
+629	                            nn.ReLU	
+630	                            nn.SpatialConvolution	(128, 128, 3, 3)
+631	                            nn.SpatialBatchNormalization	(128,)
+632	                            nn.ReLU	
+633	                            nn.SpatialConvolution	(256, 128, 1, 1)
+634	                        nn.Identity	
+635	                    nn.CAddTable	
+636	                nn.Sequential	
+637	                    nn.ConcatTable	
+638	                        nn.Sequential	
+639	                            nn.SpatialBatchNormalization	(256,)
+640	                            nn.ReLU	
+641	                            nn.SpatialConvolution	(128, 256, 1, 1)
+642	                            nn.SpatialBatchNormalization	(128,)
+643	                            nn.ReLU	
+644	                            nn.SpatialConvolution	(128, 128, 3, 3)
+645	                            nn.SpatialBatchNormalization	(128,)
+646	                            nn.ReLU	
+647	                            nn.SpatialConvolution	(256, 128, 1, 1)
+648	                        nn.Identity	
+649	                    nn.CAddTable	
+650	                nn.Sequential	
+651	                    nn.ConcatTable	
+652	                        nn.Sequential	
+653	                            nn.SpatialBatchNormalization	(256,)
+654	                            nn.ReLU	
+655	                            nn.SpatialConvolution	(128, 256, 1, 1)
+656	                            nn.SpatialBatchNormalization	(128,)
+657	                            nn.ReLU	
+658	                            nn.SpatialConvolution	(128, 128, 3, 3)
+659	                            nn.SpatialBatchNormalization	(128,)
+660	                            nn.ReLU	
+661	                            nn.SpatialConvolution	(256, 128, 1, 1)
+662	                        nn.Identity	
+663	                    nn.CAddTable	
+664	                nn.SpatialUpSamplingNearest	
+665	        nn.CAddTable	
+666	        nn.Sequential	
+667	            nn.ConcatTable	
+668	                nn.Sequential	
+669	                    nn.SpatialBatchNormalization	(256,)
+670	                    nn.ReLU	
+671	                    nn.SpatialConvolution	(128, 256, 1, 1)
+672	                    nn.SpatialBatchNormalization	(128,)
+673	                    nn.ReLU	
+674	                    nn.SpatialConvolution	(128, 128, 3, 3)
+675	                    nn.SpatialBatchNormalization	(128,)
+676	                    nn.ReLU	
+677	                    nn.SpatialConvolution	(256, 128, 1, 1)
+678	                nn.Identity	
+679	            nn.CAddTable	
+680	        nn.Sequential	
+681	            nn.SpatialConvolution	(256, 256, 1, 1)
+682	            nn.SpatialBatchNormalization	(256,)
+683	            nn.ReLU	
+684	        nn.Sequential	
+685	            nn.SpatialConvolution	(256, 256, 1, 1)
+686	            nn.SpatialBatchNormalization	(256,)
+687	            nn.ReLU	
+688	nn.CAddTable	
+689	nn.ConcatTable	
+690	    nn.Identity	
+691	    nn.Sequential	
+692	        nn.ConcatTable	
+693	            nn.Sequential	
+694	                nn.Sequential	
+695	                    nn.ConcatTable	
+696	                        nn.Sequential	
+697	                            nn.SpatialBatchNormalization	(256,)
+698	                            nn.ReLU	
+699	                            nn.SpatialConvolution	(128, 256, 1, 1)
+700	                            nn.SpatialBatchNormalization	(128,)
+701	                            nn.ReLU	
+702	                            nn.SpatialConvolution	(128, 128, 3, 3)
+703	                            nn.SpatialBatchNormalization	(128,)
+704	                            nn.ReLU	
+705	                            nn.SpatialConvolution	(256, 128, 1, 1)
+706	                        nn.Identity	
+707	                    nn.CAddTable	
+708	                nn.Sequential	
+709	                    nn.ConcatTable	
+710	                        nn.Sequential	
+711	                            nn.SpatialBatchNormalization	(256,)
+712	                            nn.ReLU	
+713	                            nn.SpatialConvolution	(128, 256, 1, 1)
+714	                            nn.SpatialBatchNormalization	(128,)
+715	                            nn.ReLU	
+716	                            nn.SpatialConvolution	(128, 128, 3, 3)
+717	                            nn.SpatialBatchNormalization	(128,)
+718	                            nn.ReLU	
+719	                            nn.SpatialConvolution	(256, 128, 1, 1)
+720	                        nn.Identity	
+721	                    nn.CAddTable	
+722	                nn.Sequential	
+723	                    nn.ConcatTable	
+724	                        nn.Sequential	
+725	                            nn.SpatialBatchNormalization	(256,)
+726	                            nn.ReLU	
+727	                            nn.SpatialConvolution	(128, 256, 1, 1)
+728	                            nn.SpatialBatchNormalization	(128,)
+729	                            nn.ReLU	
+730	                            nn.SpatialConvolution	(128, 128, 3, 3)
+731	                            nn.SpatialBatchNormalization	(128,)
+732	                            nn.ReLU	
+733	                            nn.SpatialConvolution	(256, 128, 1, 1)
+734	                        nn.Identity	
+735	                    nn.CAddTable	
+736	                nn.Sequential	
+737	                    nn.ConcatTable	
+738	                        nn.Sequential	
+739	                            nn.Sequential	
+740	                                nn.ConcatTable	
+741	                                    nn.Sequential	
+742	                                        nn.SpatialBatchNormalization	(256,)
+743	                                        nn.ReLU	
+744	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+745	                                        nn.SpatialBatchNormalization	(128,)
+746	                                        nn.ReLU	
+747	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+748	                                        nn.SpatialBatchNormalization	(128,)
+749	                                        nn.ReLU	
+750	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+751	                                    nn.Identity	
+752	                                nn.CAddTable	
+753	                            nn.Sequential	
+754	                                nn.ConcatTable	
+755	                                    nn.Sequential	
+756	                                        nn.SpatialBatchNormalization	(256,)
+757	                                        nn.ReLU	
+758	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+759	                                        nn.SpatialBatchNormalization	(128,)
+760	                                        nn.ReLU	
+761	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+762	                                        nn.SpatialBatchNormalization	(128,)
+763	                                        nn.ReLU	
+764	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+765	                                    nn.Identity	
+766	                                nn.CAddTable	
+767	                            nn.Sequential	
+768	                                nn.ConcatTable	
+769	                                    nn.Sequential	
+770	                                        nn.SpatialBatchNormalization	(256,)
+771	                                        nn.ReLU	
+772	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+773	                                        nn.SpatialBatchNormalization	(128,)
+774	                                        nn.ReLU	
+775	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+776	                                        nn.SpatialBatchNormalization	(128,)
+777	                                        nn.ReLU	
+778	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+779	                                    nn.Identity	
+780	                                nn.CAddTable	
+781	                            nn.Sequential	
+782	                                nn.ConcatTable	
+783	                                    nn.Sequential	
+784	                                        nn.Sequential	
+785	                                            nn.ConcatTable	
+786	                                                nn.Sequential	
+787	                                                    nn.SpatialBatchNormalization	(256,)
+788	                                                    nn.ReLU	
+789	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+790	                                                    nn.SpatialBatchNormalization	(128,)
+791	                                                    nn.ReLU	
+792	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+793	                                                    nn.SpatialBatchNormalization	(128,)
+794	                                                    nn.ReLU	
+795	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+796	                                                nn.Identity	
+797	                                            nn.CAddTable	
+798	                                        nn.Sequential	
+799	                                            nn.ConcatTable	
+800	                                                nn.Sequential	
+801	                                                    nn.SpatialBatchNormalization	(256,)
+802	                                                    nn.ReLU	
+803	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+804	                                                    nn.SpatialBatchNormalization	(128,)
+805	                                                    nn.ReLU	
+806	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+807	                                                    nn.SpatialBatchNormalization	(128,)
+808	                                                    nn.ReLU	
+809	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+810	                                                nn.Identity	
+811	                                            nn.CAddTable	
+812	                                        nn.Sequential	
+813	                                            nn.ConcatTable	
+814	                                                nn.Sequential	
+815	                                                    nn.SpatialBatchNormalization	(256,)
+816	                                                    nn.ReLU	
+817	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+818	                                                    nn.SpatialBatchNormalization	(128,)
+819	                                                    nn.ReLU	
+820	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+821	                                                    nn.SpatialBatchNormalization	(128,)
+822	                                                    nn.ReLU	
+823	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+824	                                                nn.Identity	
+825	                                            nn.CAddTable	
+826	                                        nn.Sequential	
+827	                                            nn.ConcatTable	
+828	                                                nn.Sequential	
+829	                                                    nn.Sequential	
+830	                                                        nn.ConcatTable	
+831	                                                            nn.Sequential	
+832	                                                                nn.SpatialBatchNormalization	(256,)
+833	                                                                nn.ReLU	
+834	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+835	                                                                nn.SpatialBatchNormalization	(128,)
+836	                                                                nn.ReLU	
+837	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+838	                                                                nn.SpatialBatchNormalization	(128,)
+839	                                                                nn.ReLU	
+840	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+841	                                                            nn.Identity	
+842	                                                        nn.CAddTable	
+843	                                                    nn.Sequential	
+844	                                                        nn.ConcatTable	
+845	                                                            nn.Sequential	
+846	                                                                nn.SpatialBatchNormalization	(256,)
+847	                                                                nn.ReLU	
+848	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+849	                                                                nn.SpatialBatchNormalization	(128,)
+850	                                                                nn.ReLU	
+851	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+852	                                                                nn.SpatialBatchNormalization	(128,)
+853	                                                                nn.ReLU	
+854	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+855	                                                            nn.Identity	
+856	                                                        nn.CAddTable	
+857	                                                    nn.Sequential	
+858	                                                        nn.ConcatTable	
+859	                                                            nn.Sequential	
+860	                                                                nn.SpatialBatchNormalization	(256,)
+861	                                                                nn.ReLU	
+862	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+863	                                                                nn.SpatialBatchNormalization	(128,)
+864	                                                                nn.ReLU	
+865	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+866	                                                                nn.SpatialBatchNormalization	(128,)
+867	                                                                nn.ReLU	
+868	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+869	                                                            nn.Identity	
+870	                                                        nn.CAddTable	
+871	                                                nn.Sequential	
+872	                                                    nn.SpatialMaxPooling	
+873	                                                    nn.Sequential	
+874	                                                        nn.ConcatTable	
+875	                                                            nn.Sequential	
+876	                                                                nn.SpatialBatchNormalization	(256,)
+877	                                                                nn.ReLU	
+878	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+879	                                                                nn.SpatialBatchNormalization	(128,)
+880	                                                                nn.ReLU	
+881	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+882	                                                                nn.SpatialBatchNormalization	(128,)
+883	                                                                nn.ReLU	
+884	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+885	                                                            nn.Identity	
+886	                                                        nn.CAddTable	
+887	                                                    nn.Sequential	
+888	                                                        nn.ConcatTable	
+889	                                                            nn.Sequential	
+890	                                                                nn.SpatialBatchNormalization	(256,)
+891	                                                                nn.ReLU	
+892	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+893	                                                                nn.SpatialBatchNormalization	(128,)
+894	                                                                nn.ReLU	
+895	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+896	                                                                nn.SpatialBatchNormalization	(128,)
+897	                                                                nn.ReLU	
+898	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+899	                                                            nn.Identity	
+900	                                                        nn.CAddTable	
+901	                                                    nn.Sequential	
+902	                                                        nn.ConcatTable	
+903	                                                            nn.Sequential	
+904	                                                                nn.SpatialBatchNormalization	(256,)
+905	                                                                nn.ReLU	
+906	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+907	                                                                nn.SpatialBatchNormalization	(128,)
+908	                                                                nn.ReLU	
+909	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+910	                                                                nn.SpatialBatchNormalization	(128,)
+911	                                                                nn.ReLU	
+912	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+913	                                                            nn.Identity	
+914	                                                        nn.CAddTable	
+915	                                                    nn.Sequential	
+916	                                                        nn.ConcatTable	
+917	                                                            nn.Sequential	
+918	                                                                nn.SpatialBatchNormalization	(256,)
+919	                                                                nn.ReLU	
+920	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+921	                                                                nn.SpatialBatchNormalization	(128,)
+922	                                                                nn.ReLU	
+923	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+924	                                                                nn.SpatialBatchNormalization	(128,)
+925	                                                                nn.ReLU	
+926	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+927	                                                            nn.Identity	
+928	                                                        nn.CAddTable	
+929	                                                    nn.Sequential	
+930	                                                        nn.ConcatTable	
+931	                                                            nn.Sequential	
+932	                                                                nn.SpatialBatchNormalization	(256,)
+933	                                                                nn.ReLU	
+934	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+935	                                                                nn.SpatialBatchNormalization	(128,)
+936	                                                                nn.ReLU	
+937	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+938	                                                                nn.SpatialBatchNormalization	(128,)
+939	                                                                nn.ReLU	
+940	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+941	                                                            nn.Identity	
+942	                                                        nn.CAddTable	
+943	                                                    nn.Sequential	
+944	                                                        nn.ConcatTable	
+945	                                                            nn.Sequential	
+946	                                                                nn.SpatialBatchNormalization	(256,)
+947	                                                                nn.ReLU	
+948	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+949	                                                                nn.SpatialBatchNormalization	(128,)
+950	                                                                nn.ReLU	
+951	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+952	                                                                nn.SpatialBatchNormalization	(128,)
+953	                                                                nn.ReLU	
+954	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+955	                                                            nn.Identity	
+956	                                                        nn.CAddTable	
+957	                                                    nn.Sequential	
+958	                                                        nn.ConcatTable	
+959	                                                            nn.Sequential	
+960	                                                                nn.SpatialBatchNormalization	(256,)
+961	                                                                nn.ReLU	
+962	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+963	                                                                nn.SpatialBatchNormalization	(128,)
+964	                                                                nn.ReLU	
+965	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+966	                                                                nn.SpatialBatchNormalization	(128,)
+967	                                                                nn.ReLU	
+968	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+969	                                                            nn.Identity	
+970	                                                        nn.CAddTable	
+971	                                                    nn.Sequential	
+972	                                                        nn.ConcatTable	
+973	                                                            nn.Sequential	
+974	                                                                nn.SpatialBatchNormalization	(256,)
+975	                                                                nn.ReLU	
+976	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+977	                                                                nn.SpatialBatchNormalization	(128,)
+978	                                                                nn.ReLU	
+979	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+980	                                                                nn.SpatialBatchNormalization	(128,)
+981	                                                                nn.ReLU	
+982	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+983	                                                            nn.Identity	
+984	                                                        nn.CAddTable	
+985	                                                    nn.Sequential	
+986	                                                        nn.ConcatTable	
+987	                                                            nn.Sequential	
+988	                                                                nn.SpatialBatchNormalization	(256,)
+989	                                                                nn.ReLU	
+990	                                                                nn.SpatialConvolution	(128, 256, 1, 1)
+991	                                                                nn.SpatialBatchNormalization	(128,)
+992	                                                                nn.ReLU	
+993	                                                                nn.SpatialConvolution	(128, 128, 3, 3)
+994	                                                                nn.SpatialBatchNormalization	(128,)
+995	                                                                nn.ReLU	
+996	                                                                nn.SpatialConvolution	(256, 128, 1, 1)
+997	                                                            nn.Identity	
+998	                                                        nn.CAddTable	
+999	                                                    nn.SpatialUpSamplingNearest	
+1000	                                            nn.CAddTable	
+1001	                                            nn.Sequential	
+1002	                                                nn.ConcatTable	
+1003	                                                    nn.Sequential	
+1004	                                                        nn.SpatialBatchNormalization	(256,)
+1005	                                                        nn.ReLU	
+1006	                                                        nn.SpatialConvolution	(128, 256, 1, 1)
+1007	                                                        nn.SpatialBatchNormalization	(128,)
+1008	                                                        nn.ReLU	
+1009	                                                        nn.SpatialConvolution	(128, 128, 3, 3)
+1010	                                                        nn.SpatialBatchNormalization	(128,)
+1011	                                                        nn.ReLU	
+1012	                                                        nn.SpatialConvolution	(256, 128, 1, 1)
+1013	                                                    nn.Identity	
+1014	                                                nn.CAddTable	
+1015	                                    nn.Sequential	
+1016	                                        nn.SpatialMaxPooling	
+1017	                                        nn.Sequential	
+1018	                                            nn.ConcatTable	
+1019	                                                nn.Sequential	
+1020	                                                    nn.SpatialBatchNormalization	(256,)
+1021	                                                    nn.ReLU	
+1022	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+1023	                                                    nn.SpatialBatchNormalization	(128,)
+1024	                                                    nn.ReLU	
+1025	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+1026	                                                    nn.SpatialBatchNormalization	(128,)
+1027	                                                    nn.ReLU	
+1028	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+1029	                                                nn.Identity	
+1030	                                            nn.CAddTable	
+1031	                                        nn.Sequential	
+1032	                                            nn.ConcatTable	
+1033	                                                nn.Sequential	
+1034	                                                    nn.SpatialBatchNormalization	(256,)
+1035	                                                    nn.ReLU	
+1036	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+1037	                                                    nn.SpatialBatchNormalization	(128,)
+1038	                                                    nn.ReLU	
+1039	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+1040	                                                    nn.SpatialBatchNormalization	(128,)
+1041	                                                    nn.ReLU	
+1042	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+1043	                                                nn.Identity	
+1044	                                            nn.CAddTable	
+1045	                                        nn.Sequential	
+1046	                                            nn.ConcatTable	
+1047	                                                nn.Sequential	
+1048	                                                    nn.SpatialBatchNormalization	(256,)
+1049	                                                    nn.ReLU	
+1050	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+1051	                                                    nn.SpatialBatchNormalization	(128,)
+1052	                                                    nn.ReLU	
+1053	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+1054	                                                    nn.SpatialBatchNormalization	(128,)
+1055	                                                    nn.ReLU	
+1056	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+1057	                                                nn.Identity	
+1058	                                            nn.CAddTable	
+1059	                                        nn.Sequential	
+1060	                                            nn.ConcatTable	
+1061	                                                nn.Sequential	
+1062	                                                    nn.SpatialBatchNormalization	(256,)
+1063	                                                    nn.ReLU	
+1064	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+1065	                                                    nn.SpatialBatchNormalization	(128,)
+1066	                                                    nn.ReLU	
+1067	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+1068	                                                    nn.SpatialBatchNormalization	(128,)
+1069	                                                    nn.ReLU	
+1070	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+1071	                                                nn.Identity	
+1072	                                            nn.CAddTable	
+1073	                                        nn.Sequential	
+1074	                                            nn.ConcatTable	
+1075	                                                nn.Sequential	
+1076	                                                    nn.SpatialBatchNormalization	(256,)
+1077	                                                    nn.ReLU	
+1078	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+1079	                                                    nn.SpatialBatchNormalization	(128,)
+1080	                                                    nn.ReLU	
+1081	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+1082	                                                    nn.SpatialBatchNormalization	(128,)
+1083	                                                    nn.ReLU	
+1084	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+1085	                                                nn.Identity	
+1086	                                            nn.CAddTable	
+1087	                                        nn.Sequential	
+1088	                                            nn.ConcatTable	
+1089	                                                nn.Sequential	
+1090	                                                    nn.SpatialBatchNormalization	(256,)
+1091	                                                    nn.ReLU	
+1092	                                                    nn.SpatialConvolution	(128, 256, 1, 1)
+1093	                                                    nn.SpatialBatchNormalization	(128,)
+1094	                                                    nn.ReLU	
+1095	                                                    nn.SpatialConvolution	(128, 128, 3, 3)
+1096	                                                    nn.SpatialBatchNormalization	(128,)
+1097	                                                    nn.ReLU	
+1098	                                                    nn.SpatialConvolution	(256, 128, 1, 1)
+1099	                                                nn.Identity	
+1100	                                            nn.CAddTable	
+1101	                                        nn.SpatialUpSamplingNearest	
+1102	                                nn.CAddTable	
+1103	                                nn.Sequential	
+1104	                                    nn.ConcatTable	
+1105	                                        nn.Sequential	
+1106	                                            nn.SpatialBatchNormalization	(256,)
+1107	                                            nn.ReLU	
+1108	                                            nn.SpatialConvolution	(128, 256, 1, 1)
+1109	                                            nn.SpatialBatchNormalization	(128,)
+1110	                                            nn.ReLU	
+1111	                                            nn.SpatialConvolution	(128, 128, 3, 3)
+1112	                                            nn.SpatialBatchNormalization	(128,)
+1113	                                            nn.ReLU	
+1114	                                            nn.SpatialConvolution	(256, 128, 1, 1)
+1115	                                        nn.Identity	
+1116	                                    nn.CAddTable	
+1117	                        nn.Sequential	
+1118	                            nn.SpatialMaxPooling	
+1119	                            nn.Sequential	
+1120	                                nn.ConcatTable	
+1121	                                    nn.Sequential	
+1122	                                        nn.SpatialBatchNormalization	(256,)
+1123	                                        nn.ReLU	
+1124	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+1125	                                        nn.SpatialBatchNormalization	(128,)
+1126	                                        nn.ReLU	
+1127	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+1128	                                        nn.SpatialBatchNormalization	(128,)
+1129	                                        nn.ReLU	
+1130	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+1131	                                    nn.Identity	
+1132	                                nn.CAddTable	
+1133	                            nn.Sequential	
+1134	                                nn.ConcatTable	
+1135	                                    nn.Sequential	
+1136	                                        nn.SpatialBatchNormalization	(256,)
+1137	                                        nn.ReLU	
+1138	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+1139	                                        nn.SpatialBatchNormalization	(128,)
+1140	                                        nn.ReLU	
+1141	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+1142	                                        nn.SpatialBatchNormalization	(128,)
+1143	                                        nn.ReLU	
+1144	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+1145	                                    nn.Identity	
+1146	                                nn.CAddTable	
+1147	                            nn.Sequential	
+1148	                                nn.ConcatTable	
+1149	                                    nn.Sequential	
+1150	                                        nn.SpatialBatchNormalization	(256,)
+1151	                                        nn.ReLU	
+1152	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+1153	                                        nn.SpatialBatchNormalization	(128,)
+1154	                                        nn.ReLU	
+1155	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+1156	                                        nn.SpatialBatchNormalization	(128,)
+1157	                                        nn.ReLU	
+1158	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+1159	                                    nn.Identity	
+1160	                                nn.CAddTable	
+1161	                            nn.Sequential	
+1162	                                nn.ConcatTable	
+1163	                                    nn.Sequential	
+1164	                                        nn.SpatialBatchNormalization	(256,)
+1165	                                        nn.ReLU	
+1166	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+1167	                                        nn.SpatialBatchNormalization	(128,)
+1168	                                        nn.ReLU	
+1169	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+1170	                                        nn.SpatialBatchNormalization	(128,)
+1171	                                        nn.ReLU	
+1172	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+1173	                                    nn.Identity	
+1174	                                nn.CAddTable	
+1175	                            nn.Sequential	
+1176	                                nn.ConcatTable	
+1177	                                    nn.Sequential	
+1178	                                        nn.SpatialBatchNormalization	(256,)
+1179	                                        nn.ReLU	
+1180	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+1181	                                        nn.SpatialBatchNormalization	(128,)
+1182	                                        nn.ReLU	
+1183	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+1184	                                        nn.SpatialBatchNormalization	(128,)
+1185	                                        nn.ReLU	
+1186	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+1187	                                    nn.Identity	
+1188	                                nn.CAddTable	
+1189	                            nn.Sequential	
+1190	                                nn.ConcatTable	
+1191	                                    nn.Sequential	
+1192	                                        nn.SpatialBatchNormalization	(256,)
+1193	                                        nn.ReLU	
+1194	                                        nn.SpatialConvolution	(128, 256, 1, 1)
+1195	                                        nn.SpatialBatchNormalization	(128,)
+1196	                                        nn.ReLU	
+1197	                                        nn.SpatialConvolution	(128, 128, 3, 3)
+1198	                                        nn.SpatialBatchNormalization	(128,)
+1199	                                        nn.ReLU	
+1200	                                        nn.SpatialConvolution	(256, 128, 1, 1)
+1201	                                    nn.Identity	
+1202	                                nn.CAddTable	
+1203	                            nn.SpatialUpSamplingNearest	
+1204	                    nn.CAddTable	
+1205	                    nn.Sequential	
+1206	                        nn.ConcatTable	
+1207	                            nn.Sequential	
+1208	                                nn.SpatialBatchNormalization	(256,)
+1209	                                nn.ReLU	
+1210	                                nn.SpatialConvolution	(128, 256, 1, 1)
+1211	                                nn.SpatialBatchNormalization	(128,)
+1212	                                nn.ReLU	
+1213	                                nn.SpatialConvolution	(128, 128, 3, 3)
+1214	                                nn.SpatialBatchNormalization	(128,)
+1215	                                nn.ReLU	
+1216	                                nn.SpatialConvolution	(256, 128, 1, 1)
+1217	                            nn.Identity	
+1218	                        nn.CAddTable	
+1219	            nn.Sequential	
+1220	                nn.SpatialMaxPooling	
+1221	                nn.Sequential	
+1222	                    nn.ConcatTable	
+1223	                        nn.Sequential	
+1224	                            nn.SpatialBatchNormalization	(256,)
+1225	                            nn.ReLU	
+1226	                            nn.SpatialConvolution	(128, 256, 1, 1)
+1227	                            nn.SpatialBatchNormalization	(128,)
+1228	                            nn.ReLU	
+1229	                            nn.SpatialConvolution	(128, 128, 3, 3)
+1230	                            nn.SpatialBatchNormalization	(128,)
+1231	                            nn.ReLU	
+1232	                            nn.SpatialConvolution	(256, 128, 1, 1)
+1233	                        nn.Identity	
+1234	                    nn.CAddTable	
+1235	                nn.Sequential	
+1236	                    nn.ConcatTable	
+1237	                        nn.Sequential	
+1238	                            nn.SpatialBatchNormalization	(256,)
+1239	                            nn.ReLU	
+1240	                            nn.SpatialConvolution	(128, 256, 1, 1)
+1241	                            nn.SpatialBatchNormalization	(128,)
+1242	                            nn.ReLU	
+1243	                            nn.SpatialConvolution	(128, 128, 3, 3)
+1244	                            nn.SpatialBatchNormalization	(128,)
+1245	                            nn.ReLU	
+1246	                            nn.SpatialConvolution	(256, 128, 1, 1)
+1247	                        nn.Identity	
+1248	                    nn.CAddTable	
+1249	                nn.Sequential	
+1250	                    nn.ConcatTable	
+1251	                        nn.Sequential	
+1252	                            nn.SpatialBatchNormalization	(256,)
+1253	                            nn.ReLU	
+1254	                            nn.SpatialConvolution	(128, 256, 1, 1)
+1255	                            nn.SpatialBatchNormalization	(128,)
+1256	                            nn.ReLU	
+1257	                            nn.SpatialConvolution	(128, 128, 3, 3)
+1258	                            nn.SpatialBatchNormalization	(128,)
+1259	                            nn.ReLU	
+1260	                            nn.SpatialConvolution	(256, 128, 1, 1)
+1261	                        nn.Identity	
+1262	                    nn.CAddTable	
+1263	                nn.Sequential	
+1264	                    nn.ConcatTable	
+1265	                        nn.Sequential	
+1266	                            nn.SpatialBatchNormalization	(256,)
+1267	                            nn.ReLU	
+1268	                            nn.SpatialConvolution	(128, 256, 1, 1)
+1269	                            nn.SpatialBatchNormalization	(128,)
+1270	                            nn.ReLU	
+1271	                            nn.SpatialConvolution	(128, 128, 3, 3)
+1272	                            nn.SpatialBatchNormalization	(128,)
+1273	                            nn.ReLU	
+1274	                            nn.SpatialConvolution	(256, 128, 1, 1)
+1275	                        nn.Identity	
+1276	                    nn.CAddTable	
+1277	                nn.Sequential	
+1278	                    nn.ConcatTable	
+1279	                        nn.Sequential	
+1280	                            nn.SpatialBatchNormalization	(256,)
+1281	                            nn.ReLU	
+1282	                            nn.SpatialConvolution	(128, 256, 1, 1)
+1283	                            nn.SpatialBatchNormalization	(128,)
+1284	                            nn.ReLU	
+1285	                            nn.SpatialConvolution	(128, 128, 3, 3)
+1286	                            nn.SpatialBatchNormalization	(128,)
+1287	                            nn.ReLU	
+1288	                            nn.SpatialConvolution	(256, 128, 1, 1)
+1289	                        nn.Identity	
+1290	                    nn.CAddTable	
+1291	                nn.Sequential	
+1292	                    nn.ConcatTable	
+1293	                        nn.Sequential	
+1294	                            nn.SpatialBatchNormalization	(256,)
+1295	                            nn.ReLU	
+1296	                            nn.SpatialConvolution	(128, 256, 1, 1)
+1297	                            nn.SpatialBatchNormalization	(128,)
+1298	                            nn.ReLU	
+1299	                            nn.SpatialConvolution	(128, 128, 3, 3)
+1300	                            nn.SpatialBatchNormalization	(128,)
+1301	                            nn.ReLU	
+1302	                            nn.SpatialConvolution	(256, 128, 1, 1)
+1303	                        nn.Identity	
+1304	                    nn.CAddTable	
+1305	                nn.SpatialUpSamplingNearest	
+1306	        nn.CAddTable	
+1307	        nn.Sequential	
+1308	            nn.ConcatTable	
+1309	                nn.Sequential	
+1310	                    nn.SpatialBatchNormalization	(256,)
+1311	                    nn.ReLU	
+1312	                    nn.SpatialConvolution	(128, 256, 1, 1)
+1313	                    nn.SpatialBatchNormalization	(128,)
+1314	                    nn.ReLU	
+1315	                    nn.SpatialConvolution	(128, 128, 3, 3)
+1316	                    nn.SpatialBatchNormalization	(128,)
+1317	                    nn.ReLU	
+1318	                    nn.SpatialConvolution	(256, 128, 1, 1)
+1319	                nn.Identity	
+1320	            nn.CAddTable	
+1321	        nn.Sequential	
+1322	            nn.SpatialConvolution	(256, 256, 1, 1)
+1323	            nn.SpatialBatchNormalization	(256,)
+1324	            nn.ReLU	
+1325	        nn.Sequential	
+1326	            nn.SpatialConvolution	(256, 256, 1, 1)
+1327	            nn.SpatialBatchNormalization	(256,)
+1328	            nn.ReLU	
+1329	nn.CAddTable	
+1330	nn.ConcatTable	
+1331	    nn.Sequential	
+1332	        nn.Sequential	
+1333	            nn.SpatialConvolution	(256, 256, 1, 1)
+1334	            nn.SpatialBatchNormalization	(256,)
+1335	            nn.ReLU	
+1336	        nn.SpatialConvolution	(200, 256, 1, 1)
+1337	        nn.SpatialUpSamplingBilinear	
+1338	        nn.Sigmoid	
