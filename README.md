@@ -2,7 +2,7 @@
 Transfer pre-trained VRN model from torch to Keras
 
 ### Source of original model
-https://github.com/AaronJackson/vrn
+https://github.com/AaronJackson/vrn<br>
 Download: http://cs.nott.ac.uk/~psxasj/download.php?file=vrn-unguided.t7
 
 ### Script used to parse t7 file
