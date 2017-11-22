@@ -2,6 +2,7 @@
 Transfer pre-trained VRN model from torch to Keras
 
 ### Source of original model
+"Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression"
 https://github.com/AaronJackson/vrn<br>
 Download: http://cs.nott.ac.uk/~psxasj/download.php?file=vrn-unguided.t7
 
