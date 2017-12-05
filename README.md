@@ -33,6 +33,7 @@ https://drive.google.com/file/d/1THX-x6TR8Qg7zFfaFXU3cFd9PCZp22IY/view?usp=shari
 
 ```python
 from tensorflow.core.framework import graph_pb2
+
 with open('vrn-tensorflow.pb', "rb") as f:
     output_graph_def = graph_pb2.GraphDef()
     output_graph_def.ParseFromString(f.read())
